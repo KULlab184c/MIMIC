@@ -1,3 +1,6 @@
 PyQt6
 paho-mqtt
 PyYAML
+pyqtgraph
+numpy
+QtPy
