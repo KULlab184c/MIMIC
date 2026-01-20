@@ -4,3 +4,4 @@ PyYAML
 pyqtgraph
 numpy
 QtPy
+simple-pid
