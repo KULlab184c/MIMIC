@@ -18,9 +18,9 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
     cd <repository_name>
     ```
 
-2.  **Create and activate a virtual environment** (recommended):
+2.  **Create and activate a virtual environment** (Mandatory):
     ```bash
-    python -m venv venv
+    python -m venv src/venv
     # On Windows:
     venv\Scripts\activate
     # On macOS/Linux:
@@ -29,7 +29,7 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
 
 3.  **Install dependencies**:
     ```bash
-    pip install -r requirements.txt
+    src/venv/bin/python -m pip install -r requirements.txt
     ```
 
 ## Usage
