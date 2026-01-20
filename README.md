@@ -14,8 +14,7 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repository_url>
-    cd <repository_name>
+    gh repo clone JulienGrdn/MIMIC
     ```
 
 2.  **Create and activate a virtual environment** (Mandatory):
