@@ -1,6 +1,6 @@
 # MIMIC - MQTT Instrument Mocking Interface Control
 
-MIMIC is a comprehensive GUI application designed for mocking, controlling, and simulating scientific instruments via MQTT. It provides a flexible interface to interact with devices, monitor their status, and send commands, making it an essential tool for testing and development in environments where physical hardware may be unavailable or scarce.
+MIMIC is a comprehensive GUI application designed for controlling and orchestrating scientific instruments via MQTT. It provides a flexible frontend interface to interact with devices, monitor their status, and send commands, acting as a centralized hub for laboratory operations and active hardware management.
 
 ## Features
 
