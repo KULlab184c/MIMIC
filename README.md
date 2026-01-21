@@ -10,6 +10,8 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
 - **Control Interface**: Send commands to devices directly from the GUI.
 - **Simulation Mode**: Run the application with a mock backend for testing without a real MQTT broker.
 
+![Live view tab](example/screenshots/live_view.png)
+
 ## Installation
 
 1.  **Clone the repository**:
@@ -20,10 +22,6 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
 2.  **Create and activate a virtual environment** (Mandatory):
     ```bash
     python -m venv src/venv
-    # On Windows:
-    venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
     ```
 
 3.  **Install dependencies**:
@@ -41,10 +39,10 @@ src/venv/bin/python MIMIC.py
 ```
 
 ### Running in Simulation Mode
-To explore the interface without a real MQTT broker, use the simulation script. This mode uses a mock backend to simulate device responses.
+To explore the interface, use the simulation script. This mode uses a mock backend to simulate devices.
 
 ```bash
-src/venv/bin/python example/run_simulation.py
+src/venv/bin/python example/fake_mqtt_backend.py
 ```
 
 ## Configuration Guide: Adding a Device
