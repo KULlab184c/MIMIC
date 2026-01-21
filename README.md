@@ -8,7 +8,7 @@ MIMIC is a comprehensive GUI application designed for controlling and orchestrat
 - **MQTT Integration**: Seamless communication with devices over MQTT.
 - **Real-time Monitoring**: Visualize device states and parameters in real-time.
 - **Control Interface**: Send commands to devices directly from the GUI.
-- **Simulation Mode**: Run the application with a mock backend for testing without a real MQTT broker.
+- **Simulation Mode**: Run the application with a mock backend for testing (needs MQTT broker).
 
 
 ![Devices tab](example/screenshots/devices.png)
