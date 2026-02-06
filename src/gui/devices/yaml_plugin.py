@@ -116,17 +116,18 @@ class GenericYamlDevice(InstrumentBase):
             self.driver.publish_param(suffix, value)
 
     def on_mqtt_message(self, suffix, payload):
+        # print(payload)
         for param in self.get_all_params():
             if hasattr(param, '_status_suffix') and param._status_suffix == suffix:
 
                 if param.param_type == 'wm_freq':
                     try:
-                        val = float(payload)
+                        val = float(eval(payload)[1])
                     except ValueError:
                         val = 0.0
 
                     if param.name not in self.wm_history:
-                        self.wm_history[param.name] = deque(maxlen=10)
+                        self.wm_history[param.name] = deque(maxlen=50)
 
                     self.wm_history[param.name].append(val)
                     self.wm_last_values[param.name] = val
@@ -143,7 +144,7 @@ class GenericYamlDevice(InstrumentBase):
 
                     # Determine Stability Criteria
                     # Filter std values < 10 MHz (0.00001 THz)
-                    threshold_thz = 0.00005
+                    threshold_thz = 0.000_002
                     filtered_stds = [s for s in self.wm_stds.values() if s < threshold_thz]
 
                     if filtered_stds:

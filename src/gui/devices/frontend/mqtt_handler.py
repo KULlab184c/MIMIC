@@ -24,7 +24,7 @@ class MqttHandler(QObject):
     def start(self):
         """Connects and starts the non-blocking loop."""
         try:
-            self.client.connect(self.broker, self.port, 60)
+            self.client.connect(self.broker, self.port)
             self.client.loop_start() # Run in a background thread
         except Exception as e:
             print(f"[MQTT] Connection Error: {e}")

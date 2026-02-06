@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import ctypes
 from PyQt6.QtWidgets import (
     QMainWindow,
     QWidget,
@@ -12,6 +13,7 @@ from PyQt6.QtWidgets import (
     QCheckBox,
     QPushButton
 )
+from PyQt6.QtGui import QIcon
 from src.gui.assets.csstyle import Style
 from src.gui.assets.theme_manager import ThemeManager
 from src.gui.tabs.devices_tab import InstrumentPanel
@@ -30,6 +32,12 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("MIMIC")
         self.resize(1000, 650)
+        icon_path = os.path.join(os.getcwd(), 'MIMIC.ico')
+        if sys.platform == 'win32':
+            myappid = "com.github.juliengrdn.mimic"
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
 
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
